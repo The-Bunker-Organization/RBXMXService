@@ -17,7 +17,9 @@ jobs:
           curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
           echo "$HOME/.rokit/bin" >> "$GITHUB_PATH"
       - name: Install tools
-        run: rokit install
+        run: |
+          rokit trust rojo-rbx/rojo
+          rokit install
       - name: Build RBXMX
         working-directory: src
         run: rojo build default.project.json -o ../RBXMXService.rbxmx
