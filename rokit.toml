@@ -1,2 +1,8 @@
-[tools]
-rojo = "rojo-rbx/rojo"
+[tool.rojo]
+source = "rojo-rbx/rojo@7.4.1"  # Add @VERSION
+
+[tool.selene]
+source = "kampfkarren/selene@0.26.1"  # Add @VERSION if using
+
+[tool.stylua]
+source = "JohnnyMorganz/stylua@20.0.3"  # Add @VERSION if using
