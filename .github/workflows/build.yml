@@ -1,47 +1,26 @@
 name: RBXMXService RBXM Generator
-
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Install Rokit
         run: |
           curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
-
           echo "$HOME/.rokit/bin" >> "$GITHUB_PATH"
-          echo "$HOME/.rokit/shims" >> "$GITHUB_PATH"
-
       - name: Install tools
-        run: |
-          rokit install
-
-      - name: Locate Rojo
-        run: |
-          echo "PATH=$PATH"
-          echo "Rokit:"
-          find "$HOME/.rokit" -type f -executable -print || true
-          echo "Rojo:"
-          find "$HOME/.rokit" -iname "rojo*" -print || true
-          which rojo || true
-
+        run: rokit install
       - name: Build RBXMX
         working-directory: src
-        run: |
-          rojo build default.project.json -o ../RBXMXService.rbxmx
-
+        run: rojo build default.project.json -o ../RBXMXService.rbxmx
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
