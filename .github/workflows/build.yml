@@ -19,10 +19,8 @@ jobs:
 
       - name: Install Rokit
         run: |
-          curl -L https://github.com/rojo-rbx/rokit/releases/latest/download/rokit-linux-x86_64 \
-            -o rokit
-          chmod +x rokit
-          sudo mv rokit /usr/local/bin/rokit
+          curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
+          echo "$HOME/.rokit/bin" >> "$GITHUB_PATH"
 
       - name: Install Rojo
         run: |
@@ -39,5 +37,5 @@ jobs:
         with:
           tag_name: build-${{ github.run_number }}
           name: RBXMXService Build ${{ github.run_number }}
-          files: RBXMXService.rbxm
+          files: RBXMXService.rbxmx
           generate_release_notes: true
