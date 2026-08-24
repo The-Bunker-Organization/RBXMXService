@@ -24,7 +24,6 @@ jobs:
 
       - name: Install Rojo
         run: |
-          rokit add rojo-rbx/rojo
           rokit install
 
       - name: Build RBXM
