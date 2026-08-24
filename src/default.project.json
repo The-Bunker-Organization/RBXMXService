@@ -1,7 +1,7 @@
 {
 	"name": "RBXMXService",
 	"tree": {
-		"RBXMXService": {
+		"RBXMXService": {        
 			"$className": "ModuleScript",
 			"$path": "MainModule.luau"
 		}
