@@ -20,20 +20,22 @@ jobs:
       - name: Install Rokit
         run: |
           curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
+
           echo "$HOME/.rokit/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.rokit/shims" >> "$GITHUB_PATH"
 
       - name: Install tools
         run: |
           rokit install
 
-      - name: Add Rokit shims to PATH
+      - name: Locate Rojo
         run: |
-          echo "$HOME/.rokit/shims" >> "$GITHUB_PATH"
-
-      - name: Check Rojo
-        run: |
-          which rojo
-          rojo --version
+          echo "PATH=$PATH"
+          echo "Rokit:"
+          find "$HOME/.rokit" -type f -executable -print || true
+          echo "Rojo:"
+          find "$HOME/.rokit" -iname "rojo*" -print || true
+          which rojo || true
 
       - name: Build RBXMX
         working-directory: src
