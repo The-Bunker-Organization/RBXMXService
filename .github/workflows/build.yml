@@ -21,13 +21,21 @@ jobs:
         run: |
           curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
           echo "$HOME/.rokit/bin" >> "$GITHUB_PATH"
-      
+
       - name: Install tools
         run: |
           rokit install
-          echo "$(rokit env --bin-path)" >> "$GITHUB_PATH"
 
-      - name: Build RBXM
+      - name: Add Rokit shims to PATH
+        run: |
+          echo "$HOME/.rokit/shims" >> "$GITHUB_PATH"
+
+      - name: Check Rojo
+        run: |
+          which rojo
+          rojo --version
+
+      - name: Build RBXMX
         working-directory: src
         run: |
           rojo build default.project.json -o ../RBXMXService.rbxmx
