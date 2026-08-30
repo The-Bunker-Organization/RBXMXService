@@ -69,7 +69,6 @@ Found a bug or have an improvement?
 * For urgent questions, email **[thebunkerproject@waifu.club](mailto:thebunkerproject@waifu.club)**.
 
 ## License
-## License
 
 RBXMXService is free and open-source software licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
 You are free to use, modify, and redistribute the software under the terms of the license.
