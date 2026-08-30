@@ -4,7 +4,7 @@
 > **RBXMXService is currently in Beta!**
 > Please report bugs or issues on our [Discord Server](https://canary.discord.com/invite/MvVBbftUYm).
 >
-> For urgent questions, contact us at **[thebunkerproject@is.notaskid.ong](mailto:thebunkerproject@is.notaskid.ong)**.
+> For urgent questions, contact us at **[thebunkerproject@waifu.club](mailto:thebunkerproject@waifu.club)**.
 
 ## About
 
@@ -50,7 +50,7 @@ instance[1].Parent = workspace --put the first instance into the workspace
 ```
 
 ### Using RBXM
-If you wanna just use the module,you can just [download the Releases](https://github.com/The-Bunker-Organization/RBXMXService/releases)
+If you wanna just use the module,you can just [download the Releases](https://github.com/The-Bunker-Organization/RBXMXService/releases) or run Rojo on the "src" folder
 
 
 ## Status
@@ -58,6 +58,7 @@ If you wanna just use the module,you can just [download the Releases](https://gi
 | Feature         | Status            |
 | --------------- | ----------------- |
 | Lua loader      | 🟢 Available      |
+| Rojo loader / RBXM Module      | 🟢 Available      |
 | Argon build     | 🟡 Working onto it |
 
 ## Contributing
@@ -65,8 +66,7 @@ If you wanna just use the module,you can just [download the Releases](https://gi
 Found a bug or have an improvement?
 
 * Open an issue on the repository.
-* Report it through our [Discord Server](https://canary.discord.com/invite/MvVBbftUYm).
-* For urgent questions, email **[thebunkerproject@is.notaskid.ong](mailto:thebunkerproject@is.notaskid.ong)**.
+* For urgent questions, email **[thebunkerproject@waifu.club](mailto:thebunkerproject@waifu.club)**.
 
 ## License
 ## License
