@@ -27,9 +27,8 @@ jobs:
           rokit trust rojo-rbx/rojo
           rokit install
 
-      - name: Build RBXMX
-        working-directory: src
-        run: rojo build default.project.json -o ../RBXMXService.rbxmx
+      - name: Build RBXM
+        run: rojo build -o PNGService.rbxm default.project.json
 
       - name: Format commit message
         id: commit
