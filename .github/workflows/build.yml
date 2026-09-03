@@ -28,7 +28,8 @@ jobs:
           rokit install
 
       - name: Build RBXM
-        run: rojo build -o PNGService.rbxm default.project.json
+        working-directory: src
+        run: rojo build -o RBXMXService.rbxmx
 
       - name: Format commit message
         id: commit
